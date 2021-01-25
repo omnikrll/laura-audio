@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>keyboard sampler</title>
+		<script src="https://unpkg.com/tone"></script>
+	</head>
+	<body>
+		<div id="main">
+		</div>
+
+		<script>
+			const keyToTone = {
+				'q': C1,
+				'w': D1,
+				'e': E1,
+				'r': F1,
+				't': G1,
+				'y': A1,
+				'u': B1,
+				'i': C2,
+				'o': D2
+			}
+
+			const synthTones = new Tone.js({
+				urls: {
+					C1: 'c1.wav',
+					D1: 'd1.wav',
+					E1: 'e1.wav',
+					F1: 'f1.wav',
+					G1: 'g1.wav',
+					A1: 'a1.wav',
+					B1: 'b1.wav',
+					C2: 'c2.wav',
+					D2: 'd2.wav'
+				},
+				release: 1,
+				baseUrl: "/samples/synth-notes/"
+			).toDestination();
+
+
+		</script>
+	</body>
+</html>
